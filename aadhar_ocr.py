@@ -6,7 +6,7 @@ import spacy
 
 pytesseract.pytesseract.tesseract_cmd =r"C:\\Users\\YADAV\\AppData\\Local\\Programs\\Tesseract-OCR\\tesseract.exe"
 
-def front(img):
+def front_extract(img):
     regex_name = None
     rgb_planes = cv2.split(img)
     result_planes = []
@@ -73,7 +73,7 @@ def front(img):
     my_dict["Gender"].append(gender)
     return my_dict
 
-def back(img):
+def back_extract(img):
     rgb_planes = cv2.split(img)
     result_planes = []
     result_norm_planes = []
